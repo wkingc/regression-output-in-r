@@ -1,0 +1,10 @@
+#regression th, td {
+    text-align: center;
+    width: 300px;
+    border-collapse: collapse;
+}
+
+#regression tr {
+    vertical-align: top;
+    border-top: solid thin gray;
+}
