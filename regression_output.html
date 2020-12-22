@@ -208,7 +208,7 @@ summary {
 
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
-<p>This presentation will use the R programming language and assume the user is using Rstudio to compile their R markdown files into HTML <span class="citation">(R Core Team <a href="#ref-Rlang2019" role="doc-biblioref">2019</a>; RStudio Team <a href="#ref-Rstudio" role="doc-biblioref">2016</a>)</span>. If you want to follow along with the R markdown, it can be downloaded <a href="https://waderstats.com/rstudio-files/regression_output/regression_output.Rmd" target="_blank">here</a>. The associated bibliography file is <a href="https://waderstats.com/rstudio-files/regression_output/regression_output.bib" target="_blank">here</a>. We also need a bit of css, which can be downloaded <a href="https://waderstats.com/rstudio-files/regression_output/regression_output.css" target="_blank">here</a>.</p>
+<p>This presentation uses the R programming language and assumes the end user is taking advantage of RStudio IDE to compile their R markdown files into HTML <span class="citation">(R Core Team <a href="#ref-Rlang2019" role="doc-biblioref">2019</a>; RStudio Team <a href="#ref-Rstudio" role="doc-biblioref">2016</a>)</span>. All of the files needed to reproduce these results can be downloaded from the Git repository <code>git clone <span>https</span>://git.waderstats.com/regression_output/</code>.</p>
 <p>The general linear model (GLM), more commonly called linear regression, is the most common statistical modeling tool a statistician or data scientist will use. As such, it is crucial to know how to present results from a GLM in a way that is understandable to your audience.</p>
 <p>The GLM assumes that the conditional distribution of the <span class="math inline">\(i^{th}\)</span> response is normal with expectation that is a linear function of a set of <span class="math inline">\(p\)</span> predictors with uncorrelated errors that represent the aggregate omitted causes of Y (equation <a href="#eq:ols">(1)</a>) <span class="citation">(Fox <a href="#ref-fox2008applied" role="doc-biblioref">2008</a>)</span>.</p>
 <p><span class="math display" id="eq:ols">\[\begin{equation} 
@@ -1017,6 +1017,53 @@ inlineReg &lt;- function(x, lab) {
 }</code></pre>
 <p>The results show that highway MPG is much better than city MPG, with 22.7 (95% CI = [18.3,27.2]) and 33.4 (95% CI = [28.4,38.4]) respectively. We found that as compared to 1999, cars built in 2008 had an increase of 0.6 (95% CI = [0.2,1]) in city MPG and 1 (95% CI = [0.5,1.5]) in highway MPG. We found that minivans have the worst MPG as compared to the referent category, -5 (95% CI = [-8.1,-1.8]) MPG lower in the city and -7.9 (95% CI = [-11.5,-4.3]) MPG lower on the highway.</p>
 </div>
+</div>
+<div id="session-info" class="section level1">
+<h1>Session Info</h1>
+<pre class="r"><code>sessionInfo()</code></pre>
+<pre><code>## R version 4.0.3 (2020-10-10)
+## Platform: x86_64-pc-linux-gnu (64-bit)
+## Running under: Ubuntu 20.04.1 LTS
+## 
+## Matrix products: default
+## BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.9.0
+## LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.9.0
+## 
+## locale:
+##  [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       
+##  [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   
+##  [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          
+## [10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices datasets  utils     methods   base     
+## 
+## other attached packages:
+##  [1] stargazer_5.2.2  ggfortify_0.4.11 Hmisc_4.4-1      Formula_1.2-4   
+##  [5] survival_3.2-7   lattice_0.20-41  ggplot2_3.3.2    kableExtra_1.3.1
+##  [9] bookdown_0.21    knitr_1.30      
+## 
+## loaded via a namespace (and not attached):
+##  [1] tidyselect_1.1.0    xfun_0.19           purrr_0.3.4        
+##  [4] splines_4.0.3       colorspace_2.0-0    vctrs_0.3.4        
+##  [7] generics_0.1.0      htmltools_0.5.0     viridisLite_0.3.0  
+## [10] yaml_2.2.1          base64enc_0.1-3     rlang_0.4.8        
+## [13] pillar_1.4.6        foreign_0.8-79      glue_1.4.2         
+## [16] withr_2.3.0         RColorBrewer_1.1-2  jpeg_0.1-8.1       
+## [19] lifecycle_0.2.0     stringr_1.4.0       munsell_0.5.0      
+## [22] gtable_0.3.0        rvest_0.3.6         htmlwidgets_1.5.2  
+## [25] evaluate_0.14       labeling_0.4.2      latticeExtra_0.6-29
+## [28] highr_0.8           htmlTable_2.1.0     backports_1.2.0    
+## [31] checkmate_2.0.0     renv_0.12.2         scales_1.1.1       
+## [34] webshot_0.5.2       farver_2.0.3        gridExtra_2.3      
+## [37] png_0.1-7           digest_0.6.27       stringi_1.5.3      
+## [40] dplyr_1.0.2         grid_4.0.3          tools_4.0.3        
+## [43] magrittr_1.5        tibble_3.0.4        cluster_2.1.0      
+## [46] tidyr_1.1.2         crayon_1.3.4        pkgconfig_2.0.3    
+## [49] ellipsis_0.3.1      Matrix_1.2-18       data.table_1.13.2  
+## [52] xml2_1.3.2          rmarkdown_2.5       httr_1.4.2         
+## [55] rstudioapi_0.13     R6_2.5.0            rpart_4.1-15       
+## [58] nnet_7.3-14         compiler_4.0.3</code></pre>
 </div>
 <div id="references" class="section level1">
 <h1>References</h1>

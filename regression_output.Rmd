@@ -15,7 +15,7 @@ output:
 
 # Introduction
 
-This presentation will use the R programming language and assume the user is using Rstudio to compile their R markdown files into HTML [@Rlang2019; @Rstudio].  If you want to follow along with the R markdown, it can be downloaded <a href="https://waderstats.com/rstudio-files/regression_output/regression_output.Rmd" target="_blank">here</a>.  The associated bibliography file is <a href="https://waderstats.com/rstudio-files/regression_output/regression_output.bib" target="_blank">here</a>.  We also need a bit of css, which can be downloaded <a href="https://waderstats.com/rstudio-files/regression_output/regression_output.css" target="_blank">here</a>.
+This presentation uses the R programming language and assumes the end user is taking advantage of RStudio IDE to compile their R markdown files into HTML [@Rlang2019; @Rstudio].  All of the files needed to reproduce these results can be downloaded from the Git repository <code>git clone <span>https</span>://git.waderstats.com/regression_output/</code>.
   
 The general linear model (GLM), more commonly called linear regression, is the most common statistical modeling tool a statistician or data scientist will use.  As such, it is crucial to know how to present results from a GLM in a way that is understandable to your audience.
 
@@ -193,6 +193,12 @@ inlineReg <- function(x, lab) {
 ```
 
 The results show that highway MPG is much better than city MPG, with `r inlineReg(x = ctyRes, lab = "(Intercept)")` and `r inlineReg(x = hwyRes, lab = "(Intercept)")` respectively.  We found that as compared to 1999, cars built in 2008 had an increase of  `r inlineReg(x = ctyRes, lab = "year.L")` in city MPG and `r inlineReg(x = hwyRes, lab = "year.L")` in highway MPG.  We found that minivans have the worst MPG as compared to the referent category, `r inlineReg(x = ctyRes, lab = "classminivan")` MPG lower in the city and `r inlineReg(x = hwyRes, lab = "classminivan")` MPG lower on the highway.
+
+# Session Info
+
+```{r sessionInfo, eval = TRUE, echo = TRUE, results = TRUE, warning = FALSE, message = FALSE}
+sessionInfo()
+```
 
 # References
 
