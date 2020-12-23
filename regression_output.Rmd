@@ -14,8 +14,6 @@ output:
 ---
 
 # Introduction
-
-This presentation uses the R programming language and assumes the end user is taking advantage of RStudio IDE to compile their R markdown files into HTML [@Rlang2019; @Rstudio].  All of the files needed to reproduce these results can be downloaded from the Git repository <code>git clone <span>https</span>://git.waderstats.com/regression_output/</code>.
   
 The general linear model (GLM), more commonly called linear regression, is the most common statistical modeling tool a statistician or data scientist will use.  As such, it is crucial to know how to present results from a GLM in a way that is understandable to your audience.
 
@@ -25,6 +23,8 @@ The GLM assumes that the conditional distribution of the $i^{th}$ response is no
   Y_{i} \sim N(\beta_0 + X_{i1}\beta_{1} + + X_{i2}\beta_{2} + ... + X_{ip}\beta_{p}, \sigma_{\epsilon}^2)
   (\#eq:ols)
 \end{equation}
+
+This presentation uses the R programming language and assumes the end user is taking advantage of RStudio IDE to compile their R markdown files into HTML [@Rlang2019; @Rstudio].  All of the files needed to reproduce these results can be downloaded from the Git repository <code>git clone <span>https</span>://git.waderstats.com/regression_output/</code>.
 
 # Required Libraries
 
