@@ -1,3 +1,3 @@
 # Overview
 
-This is the code used to create the presentation at <a href="https://wkingc.github.io/regression-output-in-r/" target="_blank">https://wkingc.github.io/regression-output-in-r/</a>.
+This is the code used to create the presentation at <a href="https://www.kingcopeland.com/regression-output-in-r/" target="_blank">https://www.kingcopeland.com/regression-output-in-r/</a>.
