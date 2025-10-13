@@ -4053,7 +4053,7 @@ F Statistic (df = 16; 122)
 </section>
 <section id="regression-summary" class="level2">
 <h2 class="anchored" data-anchor-id="regression-summary">Regression Summary</h2>
-<p>Using copy and paste to summarize results leaves a ton of room to make errors. To prevent this, we can summarize the results using inline R code. Check out the <a href="https://github.com/wkingc/regression-output-in-r/blob/main/regression_output_in_r.Rmd" target="_blank">markdown</a> file for how I did it in this case.</p>
+<p>Using copy and paste to summarize results leaves a ton of room to make errors. To prevent this, we can summarize the results using inline R code. Check out the <a href="https://github.com/wkingc/regression-output-in-r/blob/main/regression_output_in_r.qmd" target="_blank">markdown</a> file for how I did it in this case.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>ctyCoef <span class="ot">&lt;-</span> <span class="fu">coef</span>(ctyFit)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>ctyConf <span class="ot">&lt;-</span> <span class="fu">confint</span>(ctyFit)</span>
@@ -4827,7 +4827,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb9-194"><a href="#cb9-194" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-195"><a href="#cb9-195" aria-hidden="true" tabindex="-1"></a><span class="fu">## Regression Summary</span></span>
 <span id="cb9-196"><a href="#cb9-196" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-197"><a href="#cb9-197" aria-hidden="true" tabindex="-1"></a>Using copy and paste to summarize results leaves a ton of room to make errors.  To prevent this, we can summarize the results using inline R code.  Check out the &lt;a href=&quot;https://github.com/wkingc/regression-output-in-r/blob/main/regression_output_in_r.Rmd&quot; target=&quot;_blank&quot;&gt;markdown&lt;/a&gt; file for how I did it in this case.</span>
+<span id="cb9-197"><a href="#cb9-197" aria-hidden="true" tabindex="-1"></a>Using copy and paste to summarize results leaves a ton of room to make errors.  To prevent this, we can summarize the results using inline R code.  Check out the &lt;a href=&quot;https://github.com/wkingc/regression-output-in-r/blob/main/regression_output_in_r.qmd&quot; target=&quot;_blank&quot;&gt;markdown&lt;/a&gt; file for how I did it in this case.</span>
 <span id="cb9-198"><a href="#cb9-198" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-199"><a href="#cb9-199" aria-hidden="true" tabindex="-1"></a><span class="in">```{r regressionSummary, eval = TRUE, echo = TRUE, results = TRUE, warning = FALSE, message = FALSE}</span></span>
 <span id="cb9-200"><a href="#cb9-200" aria-hidden="true" tabindex="-1"></a><span class="in">ctyCoef &lt;- coef(ctyFit)</span></span>

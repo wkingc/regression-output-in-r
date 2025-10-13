@@ -194,7 +194,7 @@ stargazer(
 
 ## Regression Summary
 
-Using copy and paste to summarize results leaves a ton of room to make errors.  To prevent this, we can summarize the results using inline R code.  Check out the <a href="https://github.com/wkingc/regression-output-in-r/blob/main/regression_output_in_r.Rmd" target="_blank">markdown</a> file for how I did it in this case.
+Using copy and paste to summarize results leaves a ton of room to make errors.  To prevent this, we can summarize the results using inline R code.  Check out the <a href="https://github.com/wkingc/regression-output-in-r/blob/main/regression_output_in_r.qmd" target="_blank">markdown</a> file for how I did it in this case.
 
 ```{r regressionSummary, eval = TRUE, echo = TRUE, results = TRUE, warning = FALSE, message = FALSE}
 ctyCoef <- coef(ctyFit)
