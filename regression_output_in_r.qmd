@@ -1,30 +1,44 @@
 ---
 title: "Regression Output in R"
 author: "Wade K. Copeland"
+date: last-modified
+date-format: "MMMM DD, YYYY"
 bibliography: regression_output_in_r.bib
-biblio-style: apalike
-link-citations: yes
-output:  
-  bookdown::html_document2:
-    theme: default
-    highlight: textmate
-    code_folding: show
-    mathjax: default
-    self_contained: TRUE
-    number_sections: FALSE
-    css: regression_output_in_r.css
+format:
+    html:
+        css: regression_output_in_r.css
+        embed-resources: true
+        code-overflow: wrap
+        page-layout: full
+        code-fold: false
+        toc: true
+        toc-location: left
+        toc-depth: 4
+        toc-expand: 4
+        html-math-method: katex
+        code-tools:
+            source: true
+            toggle: true
+            caption: "Source Code"
+number-sections: false
+appendix-style: plain
+engine: jupyter
+knitr:
+    opts_knit:
+        root.dir: "./"
 ---
 
 # Introduction
   
 The general linear model (GLM), more commonly called linear regression, is a common statistical modeling tool a statistician or data scientist will use.  As such, it is crucial to know how to present results from a GLM in a way that is understandable to your audience.
 
-The GLM assumes that the conditional distribution of the $i^{th}$ response is normal with expectation that is a linear function of a set of $p$ predictors with uncorrelated errors that represent the aggregate omitted causes of $Y$ (equation \@ref(eq:ols)) [@fox2008applied].
+The GLM assumes that the conditional distribution of the $i^{th}$ response is normal with expectation that is a linear function of a set of $p$ predictors with uncorrelated errors that represent the aggregate omitted causes of $Y$ (@eq-ols) [@fox2008applied].
 
+$$
 \begin{equation} 
   Y_{i} \sim N(\beta_0 + X_{i1}\beta_{1} + + X_{i2}\beta_{2} + ... + X_{ip}\beta_{p}, \sigma_{\epsilon}^2)
-  (\#eq:ols)
 \end{equation}
+$$ {#eq-ols}
 
 This presentation uses the R programming language and assumes the end user is taking advantage of RStudio IDE to compile their R markdown files into HTML [@Rlang2019; @Rstudio].  All of the files needed to reproduce these results can be downloaded from the Git repository <a href="https://github.com/wkingc/regression-output-in-r" target="_blank">https://github.com/wkingc/regression-output-in-r</a>.
 
@@ -97,17 +111,25 @@ kable(head(mpg), caption = "Header of <b>mpg</b>.", booktabs = TRUE, escape = FA
 
 # City MPG Regression
 
-Model building starts with what predictors we hypothesize that the outcome depends on.  In this case, I hypothesize that miles per gallon in the city and highway depends on a constant, engine displacement, year of manufacture, the number of cylinders, drive type, fuel type, and type of car, some random numbers, and political party affiliation (equations \@ref(eq:cty) and \@ref(eq:hwy)).
+Model building starts with what predictors we hypothesize that the outcome depends on.  In this case, I hypothesize that miles per gallon in the city and highway depends on a constant, engine displacement, year of manufacture, the number of cylinders, drive type, fuel type, and type of car, some random numbers, and political party affiliation (@eq-cty and @eq-hwy).
 
-\begin{equation} 
-  cty_{i} = \beta_0 + dipl_{i}\beta_{1} + year_{i}\beta_{2} + cyl_{i}\beta_{3} + drv_{i}\beta_{4} + \\class_{i}\beta_{5} + rn_{i}\beta_{6} + party_{i}\beta_{7} + \epsilon_{i}
-  (\#eq:cty)
+$$
+\begin{equation}
+\begin{split}
+  cty_{i} = \beta_0 + dipl_{i}\beta_{1} + year_{i}\beta_{2} + cyl_{i}\beta_{3} + drv_{i}\beta_{4} + \\
+  \\class_{i}\beta_{5} + rn_{i}\beta_{6} + party_{i}\beta_{7} + \epsilon_{i}
+\end{split}
 \end{equation}
+$$ {#eq-cty}
 
-\begin{equation} 
-  hwy_{i} = \beta_0 + dipl_{i}\beta_{1} + year_{i}\beta_{2} + cyl_{i}\beta_{3} + drv_{i}\beta_{4} + \\class_{i}\beta_{5} + rn_{i}\beta_{6} + party_{i}\beta_{7} + \epsilon_{i}
-  (\#eq:hwy)
+$$
+\begin{equation}
+\begin{split}
+  hwy_{i} = \beta_0 + dipl_{i}\beta_{1} + year_{i}\beta_{2} + cyl_{i}\beta_{3} + drv_{i}\beta_{4} + \\
+  \\class_{i}\beta_{5} + rn_{i}\beta_{6} + party_{i}\beta_{7} + \epsilon_{i}
+\end{split}
 \end{equation}
+$$ {#eq-hwy}
 
 ## Regression Diagnostics
 
@@ -196,7 +218,7 @@ inlineReg <- function(x, lab) {
 
 The results show that highway MPG is much better than city MPG, with `r inlineReg(x = ctyRes, lab = "(Intercept)")` and `r inlineReg(x = hwyRes, lab = "(Intercept)")` respectively.  We found that as compared to 1999, cars built in 2008 had an increase of  `r inlineReg(x = ctyRes, lab = "year.L")` in city MPG and `r inlineReg(x = hwyRes, lab = "year.L")` in highway MPG.  We found that minivans have the worst MPG as compared to the referent category, `r inlineReg(x = ctyRes, lab = "classminivan")` MPG lower in the city and `r inlineReg(x = hwyRes, lab = "classminivan")` MPG lower on the highway.
 
-# Session Info
+# R Session Info
 
 ```{r sessionInfo, eval = TRUE, echo = TRUE, results = TRUE, warning = FALSE, message = FALSE}
 sessionInfo()
