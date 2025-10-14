@@ -41,7 +41,7 @@ $$
 \end{equation}
 $$ {#eq-ols}
 
-All of the files needed to reproduce these results can be downloaded from the Git repository <a href="https://github.com/wkingc/regression-output-in-r" target="_blank">https://github.com/wkingc/regression-output-in-r</a>.
+This tutorial uses the R programming language [@Rlang2019].  All of the files needed to reproduce these results can be downloaded from the Git repository <a href="https://github.com/wkingc/regression-output-in-r" target="_blank">https://github.com/wkingc/regression-output-in-r</a>.
 
 # Required Libraries
 
