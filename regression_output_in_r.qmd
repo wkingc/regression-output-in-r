@@ -3,6 +3,7 @@ title: "Regression Output in R"
 author: "Wade K. Copeland"
 date: last-modified
 date-format: "MMMM DD, YYYY"
+output-file: index.html
 bibliography: regression_output_in_r.bib
 format:
     html:
