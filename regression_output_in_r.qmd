@@ -41,11 +41,11 @@ $$
 \end{equation}
 $$ {#eq-ols}
 
-This presentation uses the R programming language and assumes the end user is taking advantage of RStudio IDE to compile their R markdown files into HTML [@Rlang2019; @Rstudio].  All of the files needed to reproduce these results can be downloaded from the Git repository <a href="https://github.com/wkingc/regression-output-in-r" target="_blank">https://github.com/wkingc/regression-output-in-r</a>.
+All of the files needed to reproduce these results can be downloaded from the Git repository <a href="https://github.com/wkingc/regression-output-in-r" target="_blank">https://github.com/wkingc/regression-output-in-r</a>.
 
 # Required Libraries
 
-The libraries <i>knitr</i>, <i>bookdown</i>, and <i>kableExtra</i> are used to generate the HTML output [@knitr; @bookdown; @kableExtra].  The <i>ggplot2</i> library is loaded for the example data set that is used in this presentation [@ggplot2].  The <i>Hmisc</i> library provides functionality needed to create variable labels [@Hmisc].  Regression diagnostics are plotted using the <i>ggfortify</i> package [@ggfortify].  The <i>stargazer</i> library will be used create nice looking regression output [@stargazer].
+The libraries <i>knitr</i>, <i>bookdown</i>, and <i>kableExtra</i> are used to generate the HTML output [@knitr; @bookdown; @kableExtra].  The <i>ggplot2</i> library is loaded for the example data set that is used in this tutorial [@ggplot2].  The <i>Hmisc</i> library provides functionality needed to create variable labels [@Hmisc].  Regression diagnostics are plotted using the <i>ggfortify</i> package [@ggfortify].  The <i>stargazer</i> library will be used create nice looking regression output [@stargazer].
 
 ```{r libraries, eval = TRUE, echo = TRUE, results = FALSE, warning = FALSE, message = FALSE}
 library("knitr")
@@ -59,7 +59,7 @@ library("stargazer")
 
 # Example Data Setup
 
-The data set used in this presentation is <b>mpg</b> from the <i>ggplot2</i> package.  From the description in the manual:
+The data set used in this tutorial is <b>mpg</b> from the <i>ggplot2</i> package.  From the description in the manual:
 
 > This dataset contains a subset of the fuel economy data that the EPA makes available <a href="http://fueleconomy.gov" target="_blank">here</a>. It contains only models which had a new release every year between 1999 and 2008 - this was used as a proxy for the popularity of the car.
 

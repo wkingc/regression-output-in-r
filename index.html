@@ -3456,11 +3456,11 @@ border-top: solid thin gray;
   Y_{i} \sim N(\beta_0 + X_{i1}\beta_{1} + + X_{i2}\beta_{2} + ... + X_{ip}\beta_{p}, \sigma_{\epsilon}^2)
 \end{equation}
 \tag{1}</span></span></p>
-<p>This presentation uses the R programming language and assumes the end user is taking advantage of RStudio IDE to compile their R markdown files into HTML <span class="citation" data-cites="Rlang2019 Rstudio">(<a href="#ref-Rlang2019" role="doc-biblioref">R Core Team 2019</a>; <a href="#ref-Rstudio" role="doc-biblioref">RStudio Team 2016</a>)</span>. All of the files needed to reproduce these results can be downloaded from the Git repository <a href="https://github.com/wkingc/regression-output-in-r" target="_blank">https://github.com/wkingc/regression-output-in-r</a>.</p>
+<p>All of the files needed to reproduce these results can be downloaded from the Git repository <a href="https://github.com/wkingc/regression-output-in-r" target="_blank">https://github.com/wkingc/regression-output-in-r</a>.</p>
 </section>
 <section id="required-libraries" class="level1">
 <h1>Required Libraries</h1>
-<p>The libraries <i>knitr</i>, <i>bookdown</i>, and <i>kableExtra</i> are used to generate the HTML output <span class="citation" data-cites="knitr bookdown kableExtra">(<a href="#ref-knitr" role="doc-biblioref">Xie 2019</a>, <a href="#ref-bookdown" role="doc-biblioref">2018</a>; <a href="#ref-kableExtra" role="doc-biblioref">Zhu 2019</a>)</span>. The <i>ggplot2</i> library is loaded for the example data set that is used in this presentation <span class="citation" data-cites="ggplot2">(<a href="#ref-ggplot2" role="doc-biblioref">Wickham 2016</a>)</span>. The <i>Hmisc</i> library provides functionality needed to create variable labels <span class="citation" data-cites="Hmisc">(<a href="#ref-Hmisc" role="doc-biblioref">Harrell Jr, Charles Dupont, and others. 2019</a>)</span>. Regression diagnostics are plotted using the <i>ggfortify</i> package <span class="citation" data-cites="ggfortify">(<a href="#ref-ggfortify" role="doc-biblioref">Tang, Horikoshi, and Li 2016</a>)</span>. The <i>stargazer</i> library will be used create nice looking regression output <span class="citation" data-cites="stargazer">(<a href="#ref-stargazer" role="doc-biblioref">Hlavac 2018</a>)</span>.</p>
+<p>The libraries <i>knitr</i>, <i>bookdown</i>, and <i>kableExtra</i> are used to generate the HTML output <span class="citation" data-cites="knitr bookdown kableExtra">(<a href="#ref-knitr" role="doc-biblioref">Xie 2019</a>, <a href="#ref-bookdown" role="doc-biblioref">2018</a>; <a href="#ref-kableExtra" role="doc-biblioref">Zhu 2019</a>)</span>. The <i>ggplot2</i> library is loaded for the example data set that is used in this tutorial <span class="citation" data-cites="ggplot2">(<a href="#ref-ggplot2" role="doc-biblioref">Wickham 2016</a>)</span>. The <i>Hmisc</i> library provides functionality needed to create variable labels <span class="citation" data-cites="Hmisc">(<a href="#ref-Hmisc" role="doc-biblioref">Harrell Jr, Charles Dupont, and others. 2019</a>)</span>. Regression diagnostics are plotted using the <i>ggfortify</i> package <span class="citation" data-cites="ggfortify">(<a href="#ref-ggfortify" role="doc-biblioref">Tang, Horikoshi, and Li 2016</a>)</span>. The <i>stargazer</i> library will be used create nice looking regression output <span class="citation" data-cites="stargazer">(<a href="#ref-stargazer" role="doc-biblioref">Hlavac 2018</a>)</span>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;knitr&quot;</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;bookdown&quot;</span>)</span>
@@ -3473,7 +3473,7 @@ border-top: solid thin gray;
 </section>
 <section id="example-data-setup" class="level1">
 <h1>Example Data Setup</h1>
-<p>The data set used in this presentation is <b>mpg</b> from the <i>ggplot2</i> package. From the description in the manual:</p>
+<p>The data set used in this tutorial is <b>mpg</b> from the <i>ggplot2</i> package. From the description in the manual:</p>
 <blockquote class="blockquote">
 <p>This dataset contains a subset of the fuel economy data that the EPA makes available <a href="http://fueleconomy.gov" target="_blank">here</a>. It contains only models which had a new release every year between 1999 and 2008 - this was used as a proxy for the popularity of the car.</p>
 </blockquote>
@@ -4137,12 +4137,6 @@ Harrell Jr, Frank E, with contributions from Charles Dupont, and many others. 20
 <div id="ref-stargazer" class="csl-entry" role="listitem">
 Hlavac, Marek. 2018. <em>Stargazer: Well-Formatted Regression and Summary Statistics Tables</em>. Bratislava, Slovakia: Central European Labour Studies Institute (CELSI). <a href="https://CRAN.R-project.org/package=stargazer">https://CRAN.R-project.org/package=stargazer</a>.
 </div>
-<div id="ref-Rlang2019" class="csl-entry" role="listitem">
-R Core Team. 2019. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.
-</div>
-<div id="ref-Rstudio" class="csl-entry" role="listitem">
-RStudio Team. 2016. <em>RStudio: Integrated Development Environment for r</em>. Boston, MA: RStudio, Inc. <a href="http://www.rstudio.com/">http://www.rstudio.com/</a>.
-</div>
 <div id="ref-ggfortify" class="csl-entry" role="listitem">
 Tang, Yuan, Masaaki Horikoshi, and Wenxuan Li. 2016. <span>“Ggfortify: Unified Interface to Visualize Statistical Result of Popular r Packages.”</span> <em>The R Journal</em> 8. <a href="https://journal.r-project.org/">https://journal.r-project.org/</a>.
 </div>
@@ -4674,11 +4668,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a>\end{equation}</span>
 <span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a>$$ {#eq-ols}</span>
 <span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a>This presentation uses the R programming language and assumes the end user is taking advantage of RStudio IDE to compile their R markdown files into HTML <span class="co">[</span><span class="ot">@Rlang2019; @Rstudio</span><span class="co">]</span>.  All of the files needed to reproduce these results can be downloaded from the Git repository &lt;a href=&quot;https://github.com/wkingc/regression-output-in-r&quot; target=&quot;_blank&quot;&gt;https://github.com/wkingc/regression-output-in-r&lt;/a&gt;.</span>
+<span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a>All of the files needed to reproduce these results can be downloaded from the Git repository &lt;a href=&quot;https://github.com/wkingc/regression-output-in-r&quot; target=&quot;_blank&quot;&gt;https://github.com/wkingc/regression-output-in-r&lt;/a&gt;.</span>
 <span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-46"><a href="#cb9-46" aria-hidden="true" tabindex="-1"></a><span class="fu"># Required Libraries</span></span>
 <span id="cb9-47"><a href="#cb9-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-48"><a href="#cb9-48" aria-hidden="true" tabindex="-1"></a>The libraries &lt;i&gt;knitr&lt;/i&gt;, &lt;i&gt;bookdown&lt;/i&gt;, and &lt;i&gt;kableExtra&lt;/i&gt; are used to generate the HTML output <span class="co">[</span><span class="ot">@knitr; @bookdown; @kableExtra</span><span class="co">]</span>.  The &lt;i&gt;ggplot2&lt;/i&gt; library is loaded for the example data set that is used in this presentation <span class="co">[</span><span class="ot">@ggplot2</span><span class="co">]</span>.  The &lt;i&gt;Hmisc&lt;/i&gt; library provides functionality needed to create variable labels <span class="co">[</span><span class="ot">@Hmisc</span><span class="co">]</span>.  Regression diagnostics are plotted using the &lt;i&gt;ggfortify&lt;/i&gt; package <span class="co">[</span><span class="ot">@ggfortify</span><span class="co">]</span>.  The &lt;i&gt;stargazer&lt;/i&gt; library will be used create nice looking regression output <span class="co">[</span><span class="ot">@stargazer</span><span class="co">]</span>.</span>
+<span id="cb9-48"><a href="#cb9-48" aria-hidden="true" tabindex="-1"></a>The libraries &lt;i&gt;knitr&lt;/i&gt;, &lt;i&gt;bookdown&lt;/i&gt;, and &lt;i&gt;kableExtra&lt;/i&gt; are used to generate the HTML output <span class="co">[</span><span class="ot">@knitr; @bookdown; @kableExtra</span><span class="co">]</span>.  The &lt;i&gt;ggplot2&lt;/i&gt; library is loaded for the example data set that is used in this tutorial <span class="co">[</span><span class="ot">@ggplot2</span><span class="co">]</span>.  The &lt;i&gt;Hmisc&lt;/i&gt; library provides functionality needed to create variable labels <span class="co">[</span><span class="ot">@Hmisc</span><span class="co">]</span>.  Regression diagnostics are plotted using the &lt;i&gt;ggfortify&lt;/i&gt; package <span class="co">[</span><span class="ot">@ggfortify</span><span class="co">]</span>.  The &lt;i&gt;stargazer&lt;/i&gt; library will be used create nice looking regression output <span class="co">[</span><span class="ot">@stargazer</span><span class="co">]</span>.</span>
 <span id="cb9-49"><a href="#cb9-49" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-50"><a href="#cb9-50" aria-hidden="true" tabindex="-1"></a><span class="in">```{r libraries, eval = TRUE, echo = TRUE, results = FALSE, warning = FALSE, message = FALSE}</span></span>
 <span id="cb9-51"><a href="#cb9-51" aria-hidden="true" tabindex="-1"></a><span class="in">library(&quot;knitr&quot;)</span></span>
@@ -4692,7 +4686,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb9-59"><a href="#cb9-59" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-60"><a href="#cb9-60" aria-hidden="true" tabindex="-1"></a><span class="fu"># Example Data Setup</span></span>
 <span id="cb9-61"><a href="#cb9-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-62"><a href="#cb9-62" aria-hidden="true" tabindex="-1"></a>The data set used in this presentation is &lt;b&gt;mpg&lt;/b&gt; from the &lt;i&gt;ggplot2&lt;/i&gt; package.  From the description in the manual:</span>
+<span id="cb9-62"><a href="#cb9-62" aria-hidden="true" tabindex="-1"></a>The data set used in this tutorial is &lt;b&gt;mpg&lt;/b&gt; from the &lt;i&gt;ggplot2&lt;/i&gt; package.  From the description in the manual:</span>
 <span id="cb9-63"><a href="#cb9-63" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-64"><a href="#cb9-64" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; This dataset contains a subset of the fuel economy data that the EPA makes available </span>&lt;a href=&quot;http://fueleconomy.gov&quot; target=&quot;_blank&quot;&gt;<span class="at">here</span>&lt;/a&gt;<span class="at">. It contains only models which had a new release every year between 1999 and 2008 - this was used as a proxy for the popularity of the car.</span></span>
 <span id="cb9-65"><a href="#cb9-65" aria-hidden="true" tabindex="-1"></a></span>
