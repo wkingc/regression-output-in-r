@@ -4,10 +4,10 @@ author: "Wade K. Copeland"
 date: last-modified
 date-format: "MMMM DD, YYYY"
 output-file: index.html
-bibliography: regression_output_in_r.bib
+bibliography: references.bib
 format:
     html:
-        css: regression_output_in_r.css
+        css: style.css
         embed-resources: true
         code-overflow: wrap
         page-layout: full
